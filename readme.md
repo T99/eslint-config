@@ -1,10 +1,24 @@
-# JavaScript Module Template
-This repository serves as an easy-start template for TypeScript NPM packages. 
+# `@t99/eslint-config`
 
-Simply clone the repository into a directory:
+A repository for keeping track of all of my ESLint configuration files.
 
-```bash
-$ git clone git@github.com:T99/js-module-template.git my-new-project
+### [Find @t99/eslint-config on NPM.](https://www.npmjs.com/package/@t99/eslint-config)
+
+## Table of Contents
+
+ - [Installation](#installation)
+ - [License](#license)
+
+## Installation
+
+Install from NPM with
+
+```
+$ npm install --save-dev @t99/eslint-config
 ```
 
-And that's it! Your project is ready to go.
+## License
+
+@t99/eslint-config is made available under the GNU General Public License v3.
+
+Copyright (C) 2022 Trevor Sears
