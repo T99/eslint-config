@@ -22,7 +22,7 @@
 	"author": "Trevor Sears <trevor@trevorsears.com> (https://trevorsears.com/)",
 	"license": "GPL-3.0-or-later",
 	"bugs": {
-		"url": "https://github.com/T99/eslint-config/issues",
+		"url": "https://github.com/T99/eslint-config/issues"
 	},
 	"homepage": "https://github.com/T99/eslint-config#readme"
 }
