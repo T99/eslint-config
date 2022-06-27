@@ -2,8 +2,7 @@
 	"name": "@t99/eslint-config",
 	"version": "0.1.0",
 	"description": "A repository for keeping track of all of my ESLint configuration files.",
-	"main": "js/main",
-	"types": ".d.ts/main",
+	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
