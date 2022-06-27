@@ -259,68 +259,284 @@ module.exports = {
 		
 		// ESLint Core - Layout & Formatting
 		// https://eslint.org/docs/latest/rules/#layout-and-formatting
-		"array-bracket-newline": "off",
-		"array-bracket-spacing": "off",
-		"array-element-newline": "off",
-		"arrow-parens": "off",
-		"arrow-spacing": "off",
-		"block-spacing": "off",
-		"brace-style": "off",
-		"comma-dangle": "off",
-		"comma-spacing": "off",
-		"comma-style": "off",
-		"computed-property-spacing": "off",
-		"dot-location": "off",
-		"eol-last": "off",
-		"func-call-spacing": "off",
+		"array-bracket-newline": ["error", {
+			"multiline": true,
+			"minItems": null
+		}],
+		"array-bracket-spacing": ["error", "never", {
+			"singleValue": false,
+			"objectsInArrays": false,
+			"arraysInArrays": false
+		}],
+		"array-element-newline": ["error", "consistent"],
+		"arrow-parens": ["error", "always"],
+		"arrow-spacing": ["error", {
+			"before": true,
+			"after": true
+		}],
+		"block-spacing": ["error", "always"],
+		"brace-style": ["error", "1tbs", {
+			"allowSingleLine": false
+		}],
+		"comma-dangle": ["error", {
+			"arrays": "always-multiline",
+			"objects": "never",
+			"imports": "never",
+			"exports": "never",
+			"functions": "never"
+		}],
+		"comma-spacing": ["error", {
+			"before": false,
+			"after": true
+		}],
+		"comma-style": ["error", "last"],
+		"computed-property-spacing": ["error", "never", {
+			"enforceForClassMembers": true
+		}],
+		"dot-location": ["error", "property"],
+		"eol-last": ["error", "always"],
+		"func-call-spacing": ["error", "never", {
+			"allowNewlines": false
+		}],
 		"function-call-argument-newline": "off",
 		"function-paren-newline": "off",
-		"generator-star-spacing": "off",
-		"implicit-arrow-linebreak": "off",
-		"indent": "off",
-		"jsx-quotes": "off",
-		"key-spacing": "off",
-		"keyword-spacing": "off",
+		"generator-star-spacing": ["error", {
+			"before": false,
+			"after": true
+		}],
+		"implicit-arrow-linebreak": ["error", "beside"],
+		"indent": ["error", "tab"], // TODO - This will need to be revisited.
+		"jsx-quotes": ["error", "prefer-double"],
+		"key-spacing": ["error", {
+			"beforeColon": false,
+			"afterColon": true,
+			"align": undefined,
+			"singleLine": {
+				"mode": "strict",
+			},
+			"multiLine": {
+				"mode": "minimum",
+			}
+		}],
+		"keyword-spacing": ["error", {
+			"before": true,
+			"after": true,
+			"overrides": {
+				"break": {
+					"after": false
+				},
+				"continue": {
+					"after": false
+				},
+				"super": {
+					"after": false
+				},
+				"this": {
+					"after": false
+				}
+			}
+		}],
 		"line-comment-position": "off",
-		"linebreak-style": "off",
-		"lines-around-comment": "off",
-		"lines-between-class-members": "off",
-		"max-len": "off",
-		"max-statements-per-line": "off",
-		"multiline-ternary": "off",
-		"new-parens": "off",
+		"linebreak-style": ["error", "unix"],
+		"lines-around-comment": ["error", {
+			"beforeBlockComment": true,
+			"afterBlockComment": false,
+			"beforeLineComment": true,
+			"afterLineComment": false,
+			"allowBlockStart": false,
+			"allowBlockEnd": false,
+			"allowClassStart": false,
+			"allowClassEnd": false,
+			"allowObjectStart": false,
+			"allowObjectEnd": false,
+			"allowArrayStart": false,
+			"allowArrayEnd": false,
+			"applyDefaultIgnorePatterns": false,
+			"ignorePattern": undefined
+		}],
+		"lines-between-class-members": ["error", "always", {
+			"exceptAfterSingleLine": false
+		}],
+		"max-len": ["error", {
+			"code": 80,
+			"tabWidth": 4,
+			"comments": 80,
+			"ignorePattern": undefined,
+			"ignoreComments": false,
+			"ignoreTrailingComments": false,
+			"ignoreUrls": false,
+			"ignoreStrings": false,
+			"ignoreTemplateLiterals": false,
+			"ignoreRegExpLiterals": false
+		}],
+		"max-statements-per-line": ["error", {
+			"max": 1
+		}],
+		"multiline-ternary": ["error", "always-multiline"],
+		"new-parens": ["error", "always"],
 		"newline-per-chained-call": "off",
-		"no-extra-parens": "off",
-		"no-mixed-spaces-and-tabs": "off",
-		"no-multi-spaces": "off",
-		"no-multiple-empty-lines": "off",
-		"no-tabs": "off",
-		"no-trailing-spaces": "off",
-		"no-whitespace-before-property": "off",
-		"nonblock-statement-body-position": "off",
-		"object-curly-newline": "off",
-		"object-curly-spacing": "off",
-		"object-property-newline": "off",
-		"operator-linebreak": "off",
-		"padded-blocks": "off",
-		"padding-line-between-statements": "off",
-		"quotes": "off",
-		"rest-spread-spacing": "off",
-		"semi": "off",
-		"semi-spacing": "off",
-		"semi-style": "off",
-		"space-before-blocks": "off",
-		"space-before-function-paren": "off",
-		"space-in-parens": "off",
-		"space-infix-ops": "off",
-		"space-unary-ops": "off",
-		"switch-colon-spacing": "off",
-		"template-curly-spacing": "off",
-		"template-tag-spacing": "off",
+		"no-extra-parens": ["error", "all", {
+			"conditionalAssign": false,
+			"returnAssign": false,
+			"nestedBinaryExpressions": false,
+			"ignoreJSX": "multi-line",
+			"enforceForArrowConditionals": false,
+			"enforceForSequenceExpressions": true,
+			"enforceForNewInMemberExpressions": false,
+			"enforceForFunctionPrototypeMethods": false
+		}],
+		"no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
+		"no-multi-spaces": ["error", {
+			"ignoreEOLComments": true
+		}],
+		"no-multiple-empty-lines": ["error", {
+			"max": 1,
+			"maxBOF": 1,
+			"maxEOF": 1
+		}],
+		"no-tabs": ["error", {
+			"allowIndentationTabs ": true
+		}],
+		"no-trailing-spaces": ["error", {
+			"skipBlankLines": true,
+			"ignoreComments": false
+		}],
+		"no-whitespace-before-property": "error",
+		"nonblock-statement-body-position": ["error", "beside"],
+		"object-curly-newline": ["error", {
+			"multiline": true,
+			"consistent": true
+		}],
+		"object-curly-spacing": ["error", "always", {
+			"arraysInObjects": true,
+			"objectsInObjects": true,
+		}],
+		"object-property-newline": ["error", {
+			"allowAllPropertiesOnSameLine": true
+		}],
+		"operator-linebreak": ["error", "after"],
+		"padded-blocks": ["error", "always", {
+			"blocks": "always",
+			"classes": "always",
+			"switches": "always",
+			"allowSingleLineBlocks": true
+		}],
+		"padding-line-between-statements": ["error", ...[
+			{
+				"blankLine": "always",
+				"prev": "*",
+				"next": [
+					"block",
+					"block-like",
+					"case",
+					"class",
+					"const",
+					"continue",
+					"default",
+					"do",
+					"export",
+					"for",
+					"function",
+					"if",
+					"import",
+					"let",
+					"return",
+					"switch",
+					"throw",
+					"var",
+					"while",
+					"with"
+				]
+			},
+			{
+				"blankLine": "always",
+				"prev": [
+					"block",
+					"block-like",
+					"break",
+					"class",
+					"const",
+					"continue",
+					"do",
+					"export",
+					"for",
+					"function",
+					"if",
+					"import",
+					"let",
+					"return",
+					"switch",
+					"throw",
+					"var",
+					"while",
+					"with"
+				],
+				"next": "*"
+			},
+			{
+				"blankLine": "never",
+				"prev": ["const", "let", "var"],
+				"next": ["const", "let", "var"]
+			},
+			{
+				"blankLine": "never",
+				"prev": "export",
+				"next": "export"
+			},
+			{
+				"blankLine": "never",
+				"prev": "import",
+				"next": "import"
+			}
+		]],
+		"quotes": ["error", "double", {
+			"avoidEscape": false,
+			"allowTemplateLiterals": true
+		}],
+		"rest-spread-spacing": ["error", "never"],
+		"semi": ["error", "always", {
+			"omitLastInOneLineBlock": false,
+			"beforeStatementContinuationChars": "always"
+		}],
+		"semi-spacing": ["error", {
+			"before": false,
+			"after": true
+		}],
+		"semi-style": ["error", "last"],
+		"space-before-blocks": ["error", {
+			"functions": "always",
+			"keywords": "always",
+			"classes": "always"
+		}],
+		"space-before-function-paren": ["error", {
+			"anonymous": "always",
+			"named": "never",
+			"asyncArrow": "always",
+		}],
+		"space-in-parens": ["error", "never"],
+		"space-infix-ops": ["error", {
+			"int32Hint": false
+		}],
+		"space-unary-ops": ["error", {
+			"words": true,
+			"nonwords": false,
+			"overrides": {}
+		}],
+		"switch-colon-spacing": ["error", {
+			"after": true,
+			"before": false
+		}],
+		"template-curly-spacing": ["error", "never"],
+		"template-tag-spacing": ["error", "never"],
 		"unicode-bom": "off",
-		"wrap-iife": "off",
+		"wrap-iife": ["error", "inside", {
+			"functionPrototypeMethods": true
+		}],
 		"wrap-regex": "off",
-		"yield-star-spacing": "off"
+		"yield-star-spacing": ["error", {
+			"before": false,
+			"after": true
+		}]
 		
 	}
 	
