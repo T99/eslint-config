@@ -1,7 +1,10 @@
 {
 	"name": "@t99/eslint-config",
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"description": "A repository for keeping track of all of my ESLint configuration files.",
+	"publishConfig": {
+		"access": "public"
+	},
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
