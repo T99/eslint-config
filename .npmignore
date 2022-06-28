@@ -8,3 +8,6 @@
 
 # Ignore misc. files.
 .npmignore
+
+# Ignore ESLint configuration file.
+.eslintrc.js
