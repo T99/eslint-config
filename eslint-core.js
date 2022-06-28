@@ -4,7 +4,18 @@
  * Project: @t99/eslint-core
  */
 
+/**
+ * The max depth to which blocks are allowed to be nested.
+ * 
+ * @type {number}
+ */
 const MAX_DEPTH = 4;
+
+/**
+ * The max depth to which callbacks are allowed to be nested.
+ * 
+ * @type {number}
+ */
 const MAX_CALLBACKS = 3;
 
 module.exports = {
