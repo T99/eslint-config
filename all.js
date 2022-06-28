@@ -6,6 +6,8 @@ module.exports = {
 		
 		"./eslint-core.js",
 		
+		"./jsdoc.js",
+		
 	],
 	
 };
