@@ -421,7 +421,7 @@ module.exports = {
 				balanced: true,
 			},
 		}],
-		strict: ["error", "global"],
+		strict: "off",
 		"symbol-description": "error",
 		"vars-on-top": "error",
 		yoda: ["error", "never", {
