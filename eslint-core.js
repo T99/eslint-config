@@ -643,7 +643,7 @@ module.exports = {
 				next: "*",
 			},
 			{
-				blankLine: "never",
+				blankLine: "any",
 				prev: ["const", "let", "var"],
 				next: ["const", "let", "var"],
 			},
