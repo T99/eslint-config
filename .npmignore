@@ -11,3 +11,6 @@
 
 # Ignore ESLint configuration file.
 .eslintrc.js
+
+# Ignore the code style example files.
+/code-style-example/**
