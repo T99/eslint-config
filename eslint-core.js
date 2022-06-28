@@ -1,5 +1,3 @@
-"use strict";
-
 const MAX_DEPTH = 4;
 const MAX_CALLBACKS = 3;
 
