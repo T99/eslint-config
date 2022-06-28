@@ -27,8 +27,7 @@ module.exports = {
 		rules: {
 			
 			// @typescript-eslint 'Supported' Rules
-			// https://github.com/typescript-eslint/typescript-eslint/tree/main/
-			//   packages/eslint-plugin/docs/rules#supported-rules
+			// https://typescript-eslint.io/rules/#supported-rules
 			"@typescript-eslint/adjacent-overload-signatures": "error",
 			"@typescript-eslint/array-type": ["error", {
 				"default": "array-simple",
@@ -48,6 +47,7 @@ module.exports = {
 					Object: {
 						message: "Avoid using the `Object` type. Did you " +
 							"mean `object`?",
+						fixWith: "object",
 					},
 					Function: {
 						message: "Avoid using the `Function` type. Prefer a " +
@@ -56,33 +56,48 @@ module.exports = {
 					Boolean: {
 						message: "Avoid using the `Boolean` type. Did you " +
 							"mean `boolean`?",
+						fixWith: "boolean",
 					},
 					Number: {
 						message: "Avoid using the `Number` type. Did you " +
 							"mean `number`?",
+						fixWith: "number",
 					},
 					BigInt: {
 						message: "Avoid using the `BigInt` type. Did you " +
 							"mean `bigint`?",
+						fixWith: "bigint",
 					},
 					String: {
 						message: "Avoid using the `String` type. Did you " +
 							"mean `string`?",
+						fixWith: "string",
 					},
 					Symbol: {
 						message: "Avoid using the `Symbol` type. Did you " +
 							"mean `symbol`?",
+						fixWith: "symbol",
 					},
 				},
 			}],
-			
-			"@typescript-eslint/class-literal-property-style": "off",
-			"@typescript-eslint/consistent-generic-constructors": "off",
-			"@typescript-eslint/consistent-indexed-object-style": "off",
-			"@typescript-eslint/consistent-type-assertions": "error",
-			"@typescript-eslint/consistent-type-definitions": "off",
-			"@typescript-eslint/consistent-type-exports": "off",
-			"@typescript-eslint/consistent-type-imports": "off",
+			"@typescript-eslint/class-literal-property-style":
+				["error", "fields"],
+			"@typescript-eslint/consistent-generic-constructors":
+				["error", "type-annotation"],
+			"@typescript-eslint/consistent-indexed-object-style":
+				["error", "record"],
+			"@typescript-eslint/consistent-type-assertions": ["error", {
+				assertionStyle: "as",
+				objectLiteralTypeAssertions: "never",
+			}],
+			"@typescript-eslint/consistent-type-definitions": ["error", "type"],
+			"@typescript-eslint/consistent-type-exports": ["error", {
+				fixMixedExportsWithInlineTypeSpecifier: false,
+			}],
+			"@typescript-eslint/consistent-type-imports": ["error", {
+				prefer: "type-imports",
+				disallowTypeAnnotations: true,
+			}],
 			"@typescript-eslint/explicit-function-return-type": ["error", {
 				allowExpressions: false,
 				allowTypedFunctionExpressions: false,
@@ -128,6 +143,7 @@ module.exports = {
 			"@typescript-eslint/no-extraneous-class": "off",
 			"@typescript-eslint/no-floating-promises": "off",
 			"@typescript-eslint/no-for-in-array": "off",
+			"@typescript-eslint/no-implicit-any-catch": "off",
 			"@typescript-eslint/no-inferrable-types": "off",
 			"@typescript-eslint/no-invalid-void-type": "off",
 			"@typescript-eslint/no-meaningless-void-operator": "off",
@@ -137,6 +153,7 @@ module.exports = {
 			"@typescript-eslint/no-non-null-asserted-nullish-coalescing": "off",
 			"@typescript-eslint/no-non-null-asserted-optional-chain": "off",
 			"@typescript-eslint/no-non-null-assertion": "off",
+			"@typescript-eslint/no-parameter-properties": "error",
 			"@typescript-eslint/no-redundant-type-constituents": "off",
 			"@typescript-eslint/no-require-imports": "off",
 			"@typescript-eslint/no-this-alias": "off",
@@ -198,13 +215,10 @@ module.exports = {
 			"@typescript-eslint/unified-signatures": "off",
 			
 			// @typescript-eslint 'Extension' Rules
-			// https://github.com/typescript-eslint/typescript-eslint/tree/main/
-			//   packages/eslint-plugin/docs/rules#extension-rules
-			"@typescript-eslint/brace-style": ["error",
-				"1tbs",
-				{
-					allowSingleLine: "true",
-				}],
+			// https://typescript-eslint.io/rules/#supported-rules
+			"@typescript-eslint/brace-style": ["error", "1tbs", {
+				allowSingleLine: "true",
+			}],
 			"@typescript-eslint/comma-dangle": ["error", "never"],
 			"@typescript-eslint/comma-spacing": ["error", {
 				before: false,
@@ -213,17 +227,16 @@ module.exports = {
 			"@typescript-eslint/default-param-last": "off",
 			"@typescript-eslint/dot-notation": "off",
 			"@typescript-eslint/func-call-spacing": "off",
-			"@typescript-eslint/indent": ["error",
-				"tab",
-				{
-					ArrayExpression: "first",
-					ObjectExpression: "first",
-				}],
+			"@typescript-eslint/indent": ["error", "tab", {
+				ArrayExpression: "first",
+				ObjectExpression: "first",
+			}],
 			"@typescript-eslint/init-declarations": "off",
 			"@typescript-eslint/keyword-spacing": "off",
 			"@typescript-eslint/lines-between-class-members": "off",
 			"@typescript-eslint/no-array-constructor": "off",
 			"@typescript-eslint/no-dupe-class-members": "off",
+			"@typescript-eslint/no-duplicate-imports": "off",
 			"@typescript-eslint/no-empty-function": "error",
 			"@typescript-eslint/no-extra-parens": "off",
 			"@typescript-eslint/no-extra-semi": "off",
@@ -244,18 +257,13 @@ module.exports = {
 			"@typescript-eslint/no-useless-constructor": "off",
 			"@typescript-eslint/object-curly-spacing": "off",
 			"@typescript-eslint/padding-line-between-statements": "off",
-			"@typescript-eslint/quotes": ["error",
-				"double"],
+			"@typescript-eslint/quotes": ["error", "double"],
 			"@typescript-eslint/require-await": "off",
 			"@typescript-eslint/return-await": "off",
-			"@typescript-eslint/semi": ["error",
-				"always"],
+			"@typescript-eslint/semi": ["error", "always"],
 			"@typescript-eslint/space-before-blocks": "off",
 			"@typescript-eslint/space-before-function-paren": "off",
 			"@typescript-eslint/space-infix-ops": "off",
-			
-			// @typescript-eslint Unfiled Rules
-			"@typescript-eslint/no-parameter-properties": "error",
 			
 		},
 		
