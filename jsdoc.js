@@ -1,10 +1,14 @@
+"use strict";
+
 module.exports = {
 	
-	"plugins": [
-		"jsdoc"
+	plugins: [
+		
+		"jsdoc",
+		
 	],
 	
-	"rules": {
+	rules: {
 		
 		"jsdoc/check-access": "off",
 		"jsdoc/check-alignment": "off",
@@ -56,7 +60,6 @@ module.exports = {
 		"jsdoc/tag-lines": "off",
 		"jsdoc/valid-types": "off",
 		
-		
-	}
+	},
 	
-}
+};
