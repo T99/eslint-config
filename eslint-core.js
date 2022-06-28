@@ -567,7 +567,7 @@ module.exports = {
 		}],
 		"no-trailing-spaces": ["error", {
 			skipBlankLines: true,
-			ignoreComments: false,
+			ignoreComments: true,
 		}],
 		"no-whitespace-before-property": "error",
 		"nonblock-statement-body-position": ["error", "beside"],
