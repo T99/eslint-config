@@ -1,6 +1,6 @@
 {
 	"name": "@t99/eslint-config",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "A repository for keeping track of all of my ESLint configuration files.",
 	"publishConfig": {
 		"access": "public"
