@@ -8,6 +8,8 @@ module.exports = {
 	
 	plugins: [
 		
+		// eslint-plugin-jsdoc Plugin
+		// https://github.com/gajus/eslint-plugin-jsdoc
 		"jsdoc",
 		
 	],
