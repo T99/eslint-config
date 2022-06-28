@@ -43,6 +43,10 @@ module.exports = {
 		// Rules surrounding JSDocs (provided by `eslint-plugin-jsdoc`).
 		"./jsdoc.js",
 		
+		// Rules that enforce usage of arrow functions over traditional
+		// functions.
+		"./prefer-arrow.js",
+		
 	],
 	
 };
