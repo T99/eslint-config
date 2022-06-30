@@ -660,11 +660,6 @@ module.exports = {
 			},
 			{
 				blankLine: "never",
-				prev: "export",
-				next: "export",
-			},
-			{
-				blankLine: "never",
 				prev: "import",
 				next: "import",
 			},
