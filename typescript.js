@@ -4,6 +4,8 @@
  * Project: @t99/eslint-core
  */
 
+const eslintCore = require("./eslint-core");
+
 module.exports = {
 	
 	overrides: [{
@@ -404,84 +406,120 @@ module.exports = {
 			
 			// @typescript-eslint 'Extension' Rules
 			// https://typescript-eslint.io/rules/#supported-rules
-			"@typescript-eslint/brace-style": ["error", "1tbs", {
-				allowSingleLine: false,
-			}],
-			"@typescript-eslint/comma-dangle": ["error", {
-				arrays: "always-multiline",
-				objects: "always-multiline",
-				imports: "always-multiline",
-				exports: "always-multiline",
-				functions: "always-multiline",
-				enums: "always-multiline",
-				generics: "always-multiline",
-				tuples: "always-multiline",
-			}],
-			"@typescript-eslint/comma-spacing": ["error", {
-				before: false,
-				after: true,
-			}],
-			"@typescript-eslint/default-param-last": "error",
-			"@typescript-eslint/dot-notation": ["error", {
-				allowKeywords: false,
-				allowPattern: undefined,
-				allowPrivateClassPropertyAccess: false,
-				allowProtectedClassPropertyAccess: false,
-				allowIndexSignaturePropertyAccess: true,
-			}],
-			"@typescript-eslint/func-call-spacing": ["error", "never"],
-			"@typescript-eslint/indent": ["error", "tab", {
-				ArrayExpression: "first",
-				ObjectExpression: "first",
-			}],
-			"@typescript-eslint/init-declarations": "off",
-			"@typescript-eslint/keyword-spacing": ["error", {
-				before: true,
-				after: true,
-				overrides: {
-					"break": {
-						after: false,
-					},
-					"continue": {
-						after: false,
-					},
-					"super": {
-						after: false,
-					},
-					"this": {
-						after: false,
-					},
-				},
-			}],
-			"@typescript-eslint/lines-between-class-members":
-				["error", "always", {
-					exceptAfterSingleLine: false,
-					exceptAfterOverload: true,
+			"@typescript-eslint/brace-style":
+				eslintCore.rules["brace-style"],
+			"@typescript-eslint/comma-dangle":
+				[eslintCore.rules["comma-dangle"][0], {
+					...eslintCore.rules["comma-dangle"][1],
+					enums: "always-multiline",
+					generics: "always-multiline",
+					tuples: "always-multiline",
 				}],
-			"@typescript-eslint/no-array-constructor": "off",
-			"@typescript-eslint/no-dupe-class-members": "error",
-			
-			// TODO - TYPESCRIPT RULES CONFIGURED UP TO THIS LINE
-			"@typescript-eslint/no-empty-function": "error",
-			"@typescript-eslint/no-extra-parens": "off",
-			"@typescript-eslint/no-extra-semi": "off",
-			"@typescript-eslint/no-implied-eval": "off",
-			"@typescript-eslint/no-invalid-this": "off",
-			"@typescript-eslint/no-loop-func": "off",
-			"@typescript-eslint/no-loss-of-precision": "off",
-			"@typescript-eslint/no-magic-numbers": "off",
-			"@typescript-eslint/no-redeclare": "off",
-			"@typescript-eslint/no-restricted-imports": "off",
-			"@typescript-eslint/no-shadow": ["error", {
-				hoist: "all",
-			}],
-			"@typescript-eslint/no-throw-literal": "off",
-			"@typescript-eslint/no-unused-expressions": "off",
-			"@typescript-eslint/no-unused-vars": "off",
-			"@typescript-eslint/no-use-before-define": "off",
+			"@typescript-eslint/comma-spacing":
+				eslintCore.rules["comma-spacing"],
+			"@typescript-eslint/default-param-last":
+				eslintCore.rules["default-param-last"],
+			"@typescript-eslint/dot-notation":
+				[eslintCore.rules["dot-notation"][0], {
+					...eslintCore.rules["dot-notation"][1],
+					allowPrivateClassPropertyAccess: false,
+					allowProtectedClassPropertyAccess: false,
+					allowIndexSignaturePropertyAccess: true,
+				}],
+			"@typescript-eslint/func-call-spacing":
+				eslintCore.rules["func-call-spacing"],
+			"@typescript-eslint/indent":
+				eslintCore.rules.indent,
+			"@typescript-eslint/init-declarations":
+				eslintCore.rules["init-declarations"],
+			"@typescript-eslint/keyword-spacing":
+				eslintCore.rules["keyword-spacing"],
+			"@typescript-eslint/lines-between-class-members":
+				[
+					eslintCore.rules["lines-between-class-members"][0],
+					eslintCore.rules["lines-between-class-members"][1],
+					{
+						...eslintCore.rules["lines-between-class-members"][2],
+						exceptAfterOverload: true,
+					},
+				],
+			"@typescript-eslint/no-array-constructor":
+				eslintCore.rules["no-array-constructor"],
+			"@typescript-eslint/no-dupe-class-members":
+				eslintCore.rules["no-dupe-class-members"],
+			"@typescript-eslint/no-empty-function":
+				[eslintCore.rules["no-empty-function"][0], {
+					...eslintCore.rules["no-empty-function"][1],
+					allow: [
+						...eslintCore.rules["no-empty-function"][1].allow,
+						"private-constructors",
+						"protected-constructors",
+						"decoratedFunctions",
+						"overrideMethods",
+					],
+				}],
+			"@typescript-eslint/no-extra-parens":
+				eslintCore.rules["no-extra-parens"],
+			"@typescript-eslint/no-extra-semi":
+				eslintCore.rules["no-extra-semi"],
+			"@typescript-eslint/no-implied-eval":
+				eslintCore.rules["no-implied-eval"],
+			"@typescript-eslint/no-invalid-this":
+				eslintCore.rules["no-invalid-this"],
+			"@typescript-eslint/no-loop-func":
+				eslintCore.rules["no-loop-func"],
+			"@typescript-eslint/no-loss-of-precision":
+				eslintCore.rules["no-loss-of-precision"],
+			"@typescript-eslint/no-magic-numbers":
+				[eslintCore.rules["no-magic-numbers"][0], {
+					...eslintCore.rules["no-magic-numbers"][1],
+					ignoreEnums: false,
+					ignoreNumericLiteralTypes: false,
+					ignoreReadonlyClassProperties: false,
+					ignoreTypeIndexes: false,
+				}],
+			"@typescript-eslint/no-redeclare":
+				[eslintCore.rules["no-redeclare"][0], {
+					...eslintCore.rules["no-redeclare"][1],
+					ignoreDeclarationMerge: true,
+				}],
+			"@typescript-eslint/no-restricted-imports":
+				[eslintCore.rules["no-restricted-imports"][0], {
+					...eslintCore.rules["no-restricted-imports"][1],
+					paths: [
+						...eslintCore.rules["no-restricted-imports"][1].paths,
+					],
+				}],
+			"@typescript-eslint/no-shadow":
+				[eslintCore.rules["no-shadow"][0], {
+					...eslintCore.rules["no-shadow"][1],
+					ignoreTypeValueShadow: false,
+					ignoreFunctionTypeParameterNameValueShadow: false,
+				}],
+			"@typescript-eslint/no-throw-literal":
+				[eslintCore.rules["no-throw-literal"], {
+					allowThrowingAny: false,
+					allowThrowingUnknown: false,
+				}],
+			"@typescript-eslint/no-unused-expressions":
+				eslintCore.rules["no-unused-expressions"],
+			"@typescript-eslint/no-unused-vars":
+				eslintCore.rules["no-unused-vars"],
+			"@typescript-eslint/no-use-before-define":
+				[eslintCore.rules["no-use-before-define"][0], {
+					...eslintCore.rules["no-use-before-define"][1],
+					enums: true,
+					typedefs: true,
+					ignoreTypeReferences: false,
+				}],
 			"@typescript-eslint/no-useless-constructor": "off",
-			"@typescript-eslint/object-curly-spacing": "off",
-			"@typescript-eslint/padding-line-between-statements": "off",
+			"@typescript-eslint/object-curly-spacing":
+				eslintCore.rules["object-curly-spacing"],
+			"@typescript-eslint/padding-line-between-statements":
+				[...eslintCore.rules["padding-line-between-statements"][0], ...[
+					...eslintCore.rules["padding-line-between-statements"].slice(1),
+					
+				]],
 			"@typescript-eslint/quotes": ["error", "double"],
 			"@typescript-eslint/require-await": "off",
 			"@typescript-eslint/return-await": "off",
@@ -503,6 +541,31 @@ module.exports = {
 			"lines-between-class-members": "off",
 			"no-array-constructor": "off",
 			"no-dupe-class-members": "off",
+			"no-empty-functions": "off",
+			"no-extra-parens": "off",
+			"no-extra-semi": "off",
+			"no-implied-eval": "off",
+			"no-invalid-this": "off",
+			"no-loop-func": "off",
+			"no-loss-of-precision": "off",
+			"no-magic-numbers": "off",
+			"no-redeclare": "off",
+			"no-restricted-imports": "off",
+			"no-shadow": "off",
+			"no-throw-literal": "off",
+			"no-unused-expressions": "off",
+			"no-unused-vars": "off",
+			"no-use-before-define": "off",
+			"no-useless-constructor": "off",
+			"object-curly-spacing": "off",
+			"padding-line-between-statements": "off",
+			quotes: "off",
+			"require-await": "off",
+			"return-await": "off",
+			semi: "off",
+			"space-before-blocks": "off",
+			"space-before-function-paren": "off",
+			"space-infix-ops": "off",
 			
 		},
 		
