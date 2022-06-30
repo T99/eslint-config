@@ -18,6 +18,8 @@ module.exports = {
 		
 		ecmaVersion: "latest",
 		
+		project: `${__dirname}/code-style-examples/typescript/tsconfig.json`,
+		
 	},
 	
 	"extends": [
