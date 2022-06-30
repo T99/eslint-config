@@ -47,6 +47,9 @@ module.exports = {
 		// functions.
 		"./prefer-arrow.js",
 		
+		// Rules specific to Typescript, or overrides with Typescript support.
+		"./typescript.js",
+		
 	],
 	
 };
