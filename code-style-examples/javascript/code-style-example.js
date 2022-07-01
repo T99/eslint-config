@@ -71,7 +71,7 @@ class Vehicle {
 
 const NUMBER_OF_CAR_WHEELS = 4;
 
-let jeep = new Vehicle(NUMBER_OF_CAR_WHEELS, "black");
+const jeep = new Vehicle(NUMBER_OF_CAR_WHEELS, "black");
 
 jeep.numberOfWheels = 1;
 
