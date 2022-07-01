@@ -511,9 +511,12 @@ module.exports = {
 					// TODO - It would be nice to just destructure the source
 					//   object and only get rid of 'allowNamedExports', because
 					//   that is the only field causing issues.
-					functions: eslintCore.rules["no-use-before-define"][1].functions,
-					classes: eslintCore.rules["no-use-before-define"][1].classes,
-					variables: eslintCore.rules["no-use-before-define"][1].variables,
+					functions:
+						eslintCore.rules["no-use-before-define"][1].functions,
+					classes:
+						eslintCore.rules["no-use-before-define"][1].classes,
+					variables:
+						eslintCore.rules["no-use-before-define"][1].variables,
 					enums: true,
 					typedefs: true,
 					ignoreTypeReferences: false,
@@ -523,15 +526,16 @@ module.exports = {
 				eslintCore.rules["object-curly-spacing"],
 			"@typescript-eslint/padding-line-between-statements":
 				[eslintCore.rules["padding-line-between-statements"][0], ...[
-					...eslintCore.rules["padding-line-between-statements"].slice(1),
+					...eslintCore.rules["padding-line-between-statements"]
+						.slice(1),
 				]],
 			"@typescript-eslint/quotes":
-				eslintCore.rules["quotes"],
+				eslintCore.rules.quotes,
 			"@typescript-eslint/require-await":
 				eslintCore.rules["require-await"],
 			"@typescript-eslint/return-await": ["error", "in-try-catch"],
 			"@typescript-eslint/semi":
-				eslintCore.rules["semi"],
+				eslintCore.rules.semi,
 			"@typescript-eslint/space-before-blocks":
 				eslintCore.rules["space-before-blocks"],
 			"@typescript-eslint/space-before-function-paren":
