@@ -520,13 +520,19 @@ module.exports = {
 					...eslintCore.rules["padding-line-between-statements"].slice(1),
 					
 				]],
-			"@typescript-eslint/quotes": ["error", "double"],
-			"@typescript-eslint/require-await": "off",
-			"@typescript-eslint/return-await": "off",
-			"@typescript-eslint/semi": ["error", "always"],
-			"@typescript-eslint/space-before-blocks": "off",
-			"@typescript-eslint/space-before-function-paren": "off",
-			"@typescript-eslint/space-infix-ops": "off",
+			"@typescript-eslint/quotes":
+				eslintCore.rules["quotes"],
+			"@typescript-eslint/require-await":
+				eslintCore.rules["require-await"],
+			"@typescript-eslint/return-await": ["error", "in-try-catch"],
+			"@typescript-eslint/semi":
+				eslintCore.rules["semi"],
+			"@typescript-eslint/space-before-blocks":
+				eslintCore.rules["space-before-blocks"],
+			"@typescript-eslint/space-before-function-paren":
+				eslintCore.rules["space-before-function-paren"],
+			"@typescript-eslint/space-infix-ops":
+				eslintCore.rules["space-infix-ops"],
 			
 			// ESLint Core rules that need to be disabled to prevent collisions
 			"brace-style": "off",
@@ -561,7 +567,7 @@ module.exports = {
 			"padding-line-between-statements": "off",
 			quotes: "off",
 			"require-await": "off",
-			"return-await": "off",
+			"no-return-await": "off",
 			semi: "off",
 			"space-before-blocks": "off",
 			"space-before-function-paren": "off",
