@@ -507,7 +507,13 @@ module.exports = {
 				eslintCore.rules["no-unused-vars"],
 			"@typescript-eslint/no-use-before-define":
 				[eslintCore.rules["no-use-before-define"][0], {
-					...eslintCore.rules["no-use-before-define"][1],
+				
+					// TODO - It would be nice to just destructure the source
+					//   object and only get rid of 'allowNamedExports', because
+					//   that is the only field causing issues.
+					functions: eslintCore.rules["no-use-before-define"][1].functions,
+					classes: eslintCore.rules["no-use-before-define"][1].classes,
+					variables: eslintCore.rules["no-use-before-define"][1].variables,
 					enums: true,
 					typedefs: true,
 					ignoreTypeReferences: false,
