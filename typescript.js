@@ -522,9 +522,8 @@ module.exports = {
 			"@typescript-eslint/object-curly-spacing":
 				eslintCore.rules["object-curly-spacing"],
 			"@typescript-eslint/padding-line-between-statements":
-				[...eslintCore.rules["padding-line-between-statements"][0], ...[
+				[eslintCore.rules["padding-line-between-statements"][0], ...[
 					...eslintCore.rules["padding-line-between-statements"].slice(1),
-					
 				]],
 			"@typescript-eslint/quotes":
 				eslintCore.rules["quotes"],
