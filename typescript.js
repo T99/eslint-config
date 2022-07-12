@@ -133,20 +133,23 @@ module.exports = {
 					
 					// Fields
 					"private-static-field",
-					"private-abstract-field",
-					"private-instance-field",
-					"private-field",
 					"protected-static-field",
-					"protected-abstract-field",
-					"protected-instance-field",
-					"protected-field",
 					"public-static-field",
-					"public-instance-field",
-					"public-abstract-field",
-					"public-field",
 					"static-field",
+					
+					"private-abstract-field",
+					"protected-abstract-field",
+					"public-abstract-field",
 					"abstract-field",
+					
+					"private-instance-field",
+					"protected-instance-field",
+					"public-instance-field",
 					"instance-field",
+					
+					"private-field",
+					"protected-field",
+					"public-field",
 					"field",
 					
 					// Constructors
