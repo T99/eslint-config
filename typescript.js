@@ -331,11 +331,7 @@ module.exports = {
 			"@typescript-eslint/prefer-readonly": ["error", {
 				onlyInlineLambdas: false,
 			}],
-			"@typescript-eslint/prefer-readonly-parameter-types": ["error", {
-				checkParameterProperties: true,
-				ignoreInferredTypes: false,
-				treatMethodsAsReadonly: true,
-			}],
+			"@typescript-eslint/prefer-readonly-parameter-types": "off",
 			"@typescript-eslint/prefer-reduce-type-parameter": "error",
 			"@typescript-eslint/prefer-regexp-exec": "error",
 			"@typescript-eslint/prefer-return-this-type": "error",
