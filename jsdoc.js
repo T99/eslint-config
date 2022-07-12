@@ -63,10 +63,7 @@ module.exports = {
 		"jsdoc/no-types": "off",
 		"jsdoc/no-undefined-types": "error",
 		"jsdoc/require-asterisk-prefix": ["error", "always"],
-		"jsdoc/require-description-complete-sentence": ["error", {
-			tags: ["param", "returns", "see"],
-			newlineBeforeCapsAssumesBadSentenceEnd: false,
-		}],
+		"jsdoc/require-description-complete-sentence": "off",
 		"jsdoc/require-description": ["error", {
 			descriptionStyle: "body",
 			checkConstructors: true,
