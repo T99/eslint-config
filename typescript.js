@@ -215,7 +215,7 @@ module.exports = {
 				},
 				{
 					selector: ["classProperty"],
-					modifiers: ["const"],
+					modifiers: ["const", "readonly"],
 					format: ["UPPER_CASE"],
 					leadingUnderscore: "forbid",
 					trailingUnderscore: "forbid",
