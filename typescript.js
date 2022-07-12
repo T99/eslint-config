@@ -215,7 +215,14 @@ module.exports = {
 				},
 				{
 					selector: ["classProperty", "classMethod"],
-					modifiers: ["const", "readonly"],
+					modifiers: ["const"],
+					format: ["UPPER_CASE"],
+					leadingUnderscore: "forbid",
+					trailingUnderscore: "forbid",
+				},
+				{
+					selector: ["classProperty", "classMethod"],
+					modifiers: ["readonly"],
 					format: ["UPPER_CASE"],
 					leadingUnderscore: "forbid",
 					trailingUnderscore: "forbid",
