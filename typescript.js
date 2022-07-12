@@ -217,7 +217,7 @@ module.exports = {
 					trailingUnderscore: "forbid",
 				},
 				{
-					selector: ["classProperty"],
+					selector: ["classProperty", "classMethod"],
 					modifiers: ["const", "readonly"],
 					format: ["UPPER_CASE"],
 					leadingUnderscore: "forbid",
@@ -225,7 +225,7 @@ module.exports = {
 				},
 				{
 					selector: ["variable"],
-					modifiers: ["const"],
+					modifiers: ["const", "readonly"],
 					format: ["camelCase", "UPPER_CASE"],
 					leadingUnderscore: "forbid",
 					trailingUnderscore: "forbid",
