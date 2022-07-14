@@ -486,7 +486,7 @@ module.exports = {
 			before: false,
 			after: true,
 		}],
-		"implicit-arrow-linebreak": ["error", "beside"],
+		"implicit-arrow-linebreak": "off",
 		indent: ["error", "tab"], // TODO - This will need to be revisited.
 		"jsx-quotes": ["error", "prefer-double"],
 		"key-spacing": ["error", {
