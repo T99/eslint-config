@@ -517,6 +517,9 @@ module.exports = {
 			"space-before-function-paren": "off",
 			"space-infix-ops": "off",
 			
+			// ESLint Rules that are disabled specifically for TypeScript
+			"no-undef": "off",
+			
 		},
 		
 	}],
