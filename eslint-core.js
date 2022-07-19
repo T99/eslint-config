@@ -492,7 +492,9 @@ module.exports = {
 			after: true,
 		}],
 		"implicit-arrow-linebreak": "off",
-		indent: ["error", "tab"], // TODO - This will need to be revisited.
+		indent: ["error", "tab", {
+			SwitchCase: 1,
+		}],
 		"jsx-quotes": ["error", "prefer-double"],
 		"key-spacing": ["error", {
 			singleLine: {
