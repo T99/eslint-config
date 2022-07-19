@@ -186,6 +186,11 @@ module.exports = {
 			min: 3,
 			max: Infinity,
 			properties: "always",
+			exceptions: [
+				"i",
+				"j",
+				"k",
+			],
 		}],
 		"id-match": "off",
 		"init-declarations": "off",
