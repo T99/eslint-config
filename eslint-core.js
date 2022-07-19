@@ -160,7 +160,7 @@ module.exports = {
 			treatUndefinedAsUnspecified: false,
 		}],
 		"consistent-this": ["error", "that"],
-		curly: ["error", "multi-or-nest"],
+		curly: ["error", "multi-line"],
 		"default-case": "off",
 		"default-case-last": "error",
 		"default-param-last": "error",
