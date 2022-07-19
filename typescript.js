@@ -175,74 +175,7 @@ module.exports = {
 				],
 			}],
 			"@typescript-eslint/method-signature-style": ["error", "method"],
-			"@typescript-eslint/naming-convention": ["error", ...[
-				{
-					selector: [
-						"default",
-						"variable",
-						"function",
-						"parameter",
-						"typeProperty",
-						"parameterProperty",
-						"classMethod",
-						"objectLiteralMethod",
-						"typeMethod",
-						"accessor",
-					],
-					format: ["camelCase"],
-					leadingUnderscore: "forbid",
-					trailingUnderscore: "forbid",
-				},
-				{
-					selector: [
-						"class",
-						"interface",
-						"typeAlias",
-						"enum",
-					],
-					format: ["PascalCase"],
-					leadingUnderscore: "forbid",
-					trailingUnderscore: "forbid",
-				},
-				{
-					selector: [
-						"enumMember",
-						"typeParameter",
-					],
-					format: ["UPPER_CASE"],
-					leadingUnderscore: "forbid",
-					trailingUnderscore: "forbid",
-				},
-				{
-					selector: ["classProperty", "classMethod"],
-					modifiers: ["const"],
-					format: ["UPPER_CASE"],
-					leadingUnderscore: "forbid",
-					trailingUnderscore: "forbid",
-				},
-				{
-					selector: ["classProperty", "classMethod"],
-					modifiers: ["readonly"],
-					format: ["UPPER_CASE"],
-					leadingUnderscore: "forbid",
-					trailingUnderscore: "forbid",
-				},
-				{
-					selector: ["variable"],
-					modifiers: ["const", "readonly"],
-					format: ["camelCase", "UPPER_CASE"],
-					leadingUnderscore: "forbid",
-					trailingUnderscore: "forbid",
-				},
-				{
-					selector: [
-						"objectLiteralProperty",
-					],
-					format: null,
-					leadingUnderscore: "forbid",
-					trailingUnderscore: "forbid",
-				},
-			]],
+			"@typescript-eslint/naming-convention": "off",
 			"@typescript-eslint/no-base-to-string": ["error", {
 				ignoredTypeNames: [],
 			}],
@@ -583,6 +516,9 @@ module.exports = {
 			"space-before-blocks": "off",
 			"space-before-function-paren": "off",
 			"space-infix-ops": "off",
+			
+			// ESLint Rules that are disabled specifically for TypeScript
+			"no-undef": "off",
 			
 		},
 		
