@@ -218,9 +218,7 @@ module.exports = {
 		"no-continue": "off",
 		"no-delete-var": "error",
 		"no-div-regex": "off",
-		"no-else-return": ["error", {
-			allowElseIf: true,
-		}],
+		"no-else-return": "off",
 		"no-empty": ["error", {
 			allowEmptyCatch: false,
 		}],
