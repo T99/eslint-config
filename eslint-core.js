@@ -137,9 +137,7 @@ module.exports = {
 			getWithoutSet: false,
 			enforceForClassMembers: true,
 		}],
-		"arrow-body-style": ["error", "as-needed", {
-			requireReturnForObjectLiteral: false,
-		}],
+		"arrow-body-style": "off",
 		"block-scoped-var": "error",
 		camelcase: ["error", {
 			properties: "always",
