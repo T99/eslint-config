@@ -188,6 +188,7 @@ module.exports = {
 				"i",
 				"j",
 				"k",
+				"id",
 			],
 		}],
 		"id-match": "off",
