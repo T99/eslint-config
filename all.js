@@ -50,6 +50,12 @@ module.exports = {
 		// Rules specific to Typescript, or overrides with Typescript support.
 		"./typescript.js",
 		
+		// Rules specific to React and JSX.
+		"./react.js",
+		
+		// React specific to the NextJS framework.
+		"./next.js",
+		
 	],
 	
 };
