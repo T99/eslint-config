@@ -113,7 +113,7 @@ module.exports = {
 				checkAttributes: true,
 				indentLogicalExpressions: true,
 			}],
-			"react/jsx-indent-props": ["error", {
+			"react/jsx-indent-props": ["off", {
 				indentMode: "first",
 				ignoreTernaryOperator: false,
 			}],
