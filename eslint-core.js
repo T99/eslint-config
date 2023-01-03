@@ -581,9 +581,7 @@ module.exports = {
 			maxBOF: 1,
 			maxEOF: 1,
 		}],
-		"no-tabs": ["error", {
-			allowIndentationTabs: true,
-		}],
+		"no-tabs": "off",
 		"no-trailing-spaces": ["error", {
 			skipBlankLines: true,
 			ignoreComments: true,
