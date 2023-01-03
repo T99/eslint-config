@@ -49,7 +49,7 @@ module.exports = {
 			
 		}],
 		"jsdoc/newline-after-description": ["error", "always"],
-		"jsdoc/no-bad-blocks": ["error", {
+		"jsdoc/no-bad-blocks": ["off", {
 			preventAllMultiAsteriskBlocks: true,
 		}],
 		"jsdoc/no-defaults": "off",
