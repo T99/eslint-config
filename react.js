@@ -216,7 +216,9 @@ module.exports = {
 				ignoreStateless: false,
 			}],
 			"react/no-namespace": "error",
-			"react/no-object-type-as-default-prop": "error",
+			
+			// TODO - Re-enable this rule once it is released!
+			"react/no-object-type-as-default-prop": "off",
 			"react/no-redundant-should-component-update": "error",
 			"react/no-render-return-value": "error",
 			"react/no-set-state": "off",
