@@ -13,4 +13,4 @@
 .eslintrc.js
 
 # Ignore the code style example files.
-/code-style-example/**
+code-style-examples/**
