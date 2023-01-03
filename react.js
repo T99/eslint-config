@@ -129,7 +129,7 @@ module.exports = {
 				maximum: 1,
 				when: "multiline",
 			}],
-			"react/jsx-newline": ["error", {
+			"react/jsx-newline": ["off", {
 				prevent: true,
 				allowMultilines: true,
 			}],
