@@ -64,7 +64,7 @@ module.exports = {
 			"react/forbid-foreign-prop-types": "off",
 			"react/forbid-prop-types": "off",
 			"react/function-component-definition": ["error", {
-				namedComponents: "function-declaration",
+				namedComponents: "arrow-function",
 				unnamedComponents: "arrow-function",
 			}],
 			"react/hook-use-state": ["error"],
