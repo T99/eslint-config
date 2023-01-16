@@ -146,7 +146,7 @@ module.exports = {
 				ignoreCase: false,
 			}],
 			"react/jsx-no-leaked-render": ["error", {
-				validStrategies: [],
+				validStrategies: ["ternary"],
 			}],
 			"react/jsx-no-literals": "off",
 			"react/jsx-no-script-url": ["error", []],
