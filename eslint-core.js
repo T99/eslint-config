@@ -324,7 +324,7 @@ module.exports = {
 			ignoreOnInitialization: false,
 		}],
 		"no-shadow-restricted-names": "error",
-		"no-ternary": "error",
+		"no-ternary": "off",
 		"no-throw-literal": "error",
 		"no-undef-init": "error",
 		"no-undefined": "off",
