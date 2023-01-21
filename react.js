@@ -82,7 +82,7 @@ module.exports = {
 				propElementValues: "always",
 			}],
 			"react/jsx-curly-newline": ["error", {
-				multiline: "require",
+				multiline: "consistent",
 				singleline: "forbid",
 			}],
 			"react/jsx-curly-spacing": ["error", {
