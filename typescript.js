@@ -84,7 +84,7 @@ module.exports = {
 				["error", "record"],
 			"@typescript-eslint/consistent-type-assertions": ["error", {
 				assertionStyle: "as",
-				objectLiteralTypeAssertions: "never",
+				objectLiteralTypeAssertions: "allow",
 			}],
 			"@typescript-eslint/consistent-type-definitions": ["error", "type"],
 			"@typescript-eslint/consistent-type-exports": ["error", {
