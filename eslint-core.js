@@ -716,4 +716,6 @@ module.exports = {
 		
 	},
 	
+	reportUnusedDisableDirectives: true,
+	
 };
