@@ -48,7 +48,6 @@ module.exports = {
 			noSingleLineBlocks: true,
 			
 		}],
-		"jsdoc/newline-after-description": ["error", "always"],
 		"jsdoc/no-bad-blocks": ["off", {
 			preventAllMultiAsteriskBlocks: true,
 		}],
