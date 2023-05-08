@@ -8,7 +8,8 @@
 	"main": "index.js",
 	"scripts": {
 		"lint": "eslint code-style-examples/** ./*.js",
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "eslint --print-config ./all.js",
+		"prepack": "npm run test"
 	},
 	"repository": {
 		"type": "git",
