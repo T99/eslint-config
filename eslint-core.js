@@ -527,9 +527,9 @@ module.exports = {
 		"line-comment-position": "off",
 		"linebreak-style": ["off", "unix"],
 		"lines-around-comment": ["error", {
-			beforeBlockComment: true,
+			beforeBlockComment: false,
 			afterBlockComment: false,
-			beforeLineComment: true,
+			beforeLineComment: false,
 			afterLineComment: false,
 			allowBlockStart: false,
 			allowBlockEnd: false,
