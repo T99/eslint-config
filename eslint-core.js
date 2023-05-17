@@ -103,13 +103,13 @@ module.exports = {
 		"no-unused-private-class-members": "error",
 		"no-unused-vars": ["error", {
 			vars: "all",
-			varsIgnorePattern: undefined,
+			varsIgnorePattern: "^_",
 			args: "all",
-			ignoreRestSiblings: false,
-			argsIgnorePattern: undefined,
-			destructuredArrayIgnorePattern: "^_",
+			argsIgnorePattern: "^_",
 			caughtErrors: "all",
-			caughtErrorsIgnorePattern: "^(_|ignored?)",
+			caughtErrorsIgnorePattern: "^_",
+			destructuredArrayIgnorePattern: "^_",
+			ignoreRestSiblings: false,
 			
 		}],
 		"no-use-before-define": ["error", {
